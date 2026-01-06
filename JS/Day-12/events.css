@@ -1,0 +1,40 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+
+h1 {
+    /* text-align: center; */
+}
+
+.boxes {
+    height: 120px;
+    width: 120px;
+
+    margin: 20px;
+
+    border: 1.5px dashed black;
+    border-radius: 20px;
+
+    /* background-color: blue; */
+}
+
+#red {
+    background-color: red;
+}
+#green {
+    background-color: green;
+}
+#blue {
+    background-color: blue;
+}
+
+a {
+    margin: 20px;
+    text-decoration: none;
+}

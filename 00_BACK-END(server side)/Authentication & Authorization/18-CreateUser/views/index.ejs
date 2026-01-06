@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+        <h2 class="text-2xl text-gray-800 text-center mb-6">Sign Up User</h2>
+
+        <form action="/createUser" method="post" class="space-y-3">
+
+            <input 
+                type="text" 
+                placeholder="Username" 
+                name="username" 
+                class="w-full px-3 py-2 border  rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900 outline-none"
+                required
+            >
+
+            <input 
+                type="email" 
+                placeholder="Email" 
+                name="email" 
+                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900 outline-none"
+                required
+            >
+
+            <input 
+                type="password" 
+                placeholder="Password" 
+                name="password" 
+                class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900 outline-none"
+                required
+            >
+
+            <input 
+                type="number" 
+                placeholder="Mobile Number" 
+                name="MobileNo" 
+                class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900 outline-none"
+                required
+            >
+
+            <button 
+                type="submit" 
+                class="w-full bg-blue-600 text-white py-2 px-4 rounded-md shadow-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                Sign Up
+            </button>
+        </form>
+
+        <form action="/login" method="get" class="mt-1">
+
+            <button 
+                type="submit" 
+                class=" px-3 py-2 w-full bg-blue-600 text-white py-2 px-4 rounded-md shadow-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                Login
+            </button>
+
+        </form>
+    </div>
+
+</body>
+</html>

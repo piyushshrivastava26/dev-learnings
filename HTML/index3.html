@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3</title>
+</head>
+<body>
+    
+    <!-- CREATION OF A FORM : form tag is used to take inputs with action attributes, AA is used to specify the URL to which the inputed data will be sent when the form is submitted.
+     
+    If there is no URL specified then the data 'll stored to the current page URL's.
+    
+    It is a server side process that processes the form data like python, PHP.-->
+
+    <form action="">
+        <input type="email" placeholder="enter your email">
+        <input type="password" placeholder="enter your password">
+        <input type="submit">
+    </form>
+
+    <br>
+
+    <form action="">
+        First Name : <input type="text""><br>
+        Middle Name : <input type="text"><br>
+        Surname : <input type="text"><br>
+        <button>Submit</button>
+    </form>
+
+
+    <hr><br>
+
+
+    <!--NAME & VALUE PROPERTY : NAME is used as the id for data and it is unique to each tag.
+    
+    VALUE, sets the starting or default value for the input elements & sent along when submitted. -->
+
+    <form action="">
+        <input type="text" placeholder="name" name="name_input" value="siya pati ram"><br>        
+        <input type="password" placeholder="password" name="passeord_ip" value="vishnu avatar"><br><br>
+        <input type="submit">
+    </form>
+
+
+    <hr><br>
+
+    <!--LABEL TAG : -->
+
+    <form action="">
+        <label for="username">Username</label>
+        <input type="email" placeholder="email" name="username" id="username">  <!--id is cumpulsory only as it connects the label to a form element. -->
+        <br>
+        <label for="ip_password">Password</label>
+        <input type="password" placeholder="password" id="ip_password">
+        <br>
+        <input type="submit">
+    </form>
+
+    <hr><br>
+
+
+    <!--Diff. Input Types : -->
+
+    <input type="text" placeholder="name" id="nameOFuser"><br>
+    <input type="email" placeholder="e-mail" id="ip_email"><br>
+    <input type="password" placeholder="password" id="ip_passcode"><br><br>
+
+    <input type="tel" placeholder="phone number" id="contact_no"><br>
+    <input type="date" id="date_input"><br>
+    <input type="datetime-local"><br><br>
+
+    <input type="file" placeholder="Enter the required file"><br><br><br>
+
+    <label for="music">Volume :</label>
+    <input type="range" id="music">
+    <br><br>
+
+    <label for="Color_Picker">Volume :</label>
+    <input type="color" id="Color_Picker">
+    <br><br>
+
+    <label for="serach_area">Search </label>
+    <input type="search" placeholder="search here" name="" id="serach_area">
+    <br>
+
+    Button : <input type="button" name="" id="" value="Button"><br>
+
+    <input type="submit" name="" id="">
+
+    <hr><br>
+
+    <!--Radio : Name should be same for same catagory -->
+
+    <label for="teenage_child"> <=18</label>
+    <input type="radio" name="AgeIdentifier" id="teenage_child" value="<=18">
+    <label for="teenage_child"> <=18</label>
+
+    <br>
+    <label for="teenage"> =18</label>
+    <input type="radio" name="AgeIdentifier" id="teenage" value="=18">
+    <br>
+    <label for="adult"> >=18</label>
+    <input type="radio" name="AgeIdentifier" id="adult" value=" >=18">
+
+
+    <br><hr>
+
+
+    <!--Checkbox : give access to user to check max possible options-->
+
+    <label for="teenage_child"> <=18</label>
+    <input type="checkbox" name="AgeIdentifier" id="teenage_child" value="<=18">
+    <br>
+    <label for="teenage"> =18</label>
+    <input type="checkbox" name="AgeIdentifier" id="teenage" value="=18">
+    <br>
+    <label for="adult"> >=18</label>
+    <input type="checkbox" name="AgeIdentifier" id="adult" value=" >=18">
+
+
+    <br><hr><br>
+
+
+
+    <!--Select : give access to user to select only one option -->
+
+    <form action="">
+        <label for="favSport">Which Sport do you play ?</label>
+        <select name="Sports" id="favSport">
+            <option value="blank"></option>
+            <option value="Baseball">Baseball</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Boxing">Boxing</option>
+            <option value="Cricket">Cricket</option>
+            <option value="Hockey">Hockey</option>
+            <option value="Shooting">Shooting</option>
+            <option value="Tennis">Tennis</option>
+        </select>
+        <br><br>
+    </form>
+
+
+    <hr><br>
+
+    <!--Text Area : It is used for multiline text input from the user in forms -->
+
+    <label for="message">Write your reviews about the quality code ?</label>
+    <textarea rows="20" cols="70" name="" id="message">
+        default text here
+    </textarea>
+
+
+    <hr><br>
+
+
+    <!-- iFrame Tag : It brings another webpage content within a webpage. -->
+
+    <iframe width="400" height="200" src="www.google.com" frameborder="10"></iframe>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Edit & Remove</title>
+
+    <style>
+        *{
+            /* margin: 0px;
+            padding: 0px;
+            box-sizing: border-box; */
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Adding, editing & removing elements using DOM Manipulation</h1><br>
+    <ul id="langs">
+        <li>C++</li>
+        <li>HTML | CSS</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName) {
+        // creating a new li
+        const lang = document.createElement('li')
+        console.log(lang);
+
+        // appending langName in lang
+        // lang.innerHTML = `${langName}`  // usuallly avoid
+        lang.appendChild(document.createTextNode(langName))     // best practice
+
+        // appending lang in ul
+        document.querySelector('#langs').appendChild(lang)
+    }
+    addLang('Python')
+
+
+
+    // editing / replacing elements 
+
+    // one way
+    const secondEle = document.querySelector("li:nth-child(2)")
+    secondEle.innerHTML = "HTML | CSS | JS"  // not an optimised way
+
+    // another way
+    const thirdEle = document.querySelector("li:nth-child(3)")
+    console.log(thirdEle);
+    
+    const newList = document.createElement("li")
+    console.log(newList);
+    
+    newList.textContent = "React"
+    thirdEle.replaceWith(newList)
+
+    // one more way 
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>C | C++</li>'
+    
+
+
+    // removing elements 
+
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()   // will remove the last element
+    
+
+</script>
+</html>

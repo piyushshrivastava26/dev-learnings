@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="nav">
+
+            <h1>QuickURL</h1>
+
+            <div id="div2">
+                <h2>Home</h2>
+                <h2>History</h2>
+                <h2>Contact Us</h2>
+            </div>
+
+            <h3><span>Login</span>or<span>Sign Up</span></h3>
+
+        </div>
+
+        <div id="body">
+            <h2>Short your URL</h2>
+
+            <form action="/shortingURL" method="post">
+
+                <label for="IPlongURL">Enter the long Uniform Resource Locator(URL)</label>
+                <input type="text" name="IPlongURL" id="IPlongURL">
+
+                <button type="submit">Short URL</button>
+
+            </form>
+             
+            <% if(shortedURL) { %>
+                <p> New URL : <a href="<%= shortedURL %>" target="_blank"><%= shortedURL %></a>
+                </p>
+            <% } %>
+        </div>
+
+        <div id="shortened-urls">
+            <h3>Previously Shortened URLs</h3>
+            <ul>
+                <li>https://short.ly/abc123</li>
+                <li>https://short.ly/xyz456</li>
+            </ul>
+        </div>
+
+    </div>
+
+<!-- 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+
+        var tl = gsap.timeline()
+
+        tl.from('#nav', {
+            y: -30,
+            opacity: 0,
+            delay: 0.2,
+            duration: 0.5,
+            stagger: 0.1
+        })
+
+        tl.from('body', {
+            x: 400,
+            opacity: 0,
+            duration: 0.8,
+            delay: 0.3,
+            stagger: 0.4
+        })
+
+        tl.from('footer', {
+            y: +30,
+            opacity: 0,
+            delay: 0.2,
+            duration: 0.5,
+            stagger: 0.1
+        })
+    </script> 
+-->
+
+</body>
+
+</html>

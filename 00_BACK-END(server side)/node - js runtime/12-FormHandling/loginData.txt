@@ -1,0 +1,4 @@
+
+ [object Object]2024-11-29T19:10:39.886Z - {"username":"xyz","email":"xyz@gmail.com","password":"neverGiveUp"}
+2025-09-02T21:32:39.819Z - {"username":"John Doe","email":"johndoe@gmail.com","password":"idontknow"}
+2025-09-02T21:37:55.948Z - {"username":"John Doe","email":"johndoe@gmail.com","password":"123456789"}

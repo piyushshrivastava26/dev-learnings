@@ -1,0 +1,16 @@
+{
+  "name": "17.1-jwt_raw",
+  "version": "1.0.0",
+  "description": "about json-web-tokem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "json-web-token": "^3.2.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

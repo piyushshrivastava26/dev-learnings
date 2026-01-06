@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASync JS</title>
+
+    <style> 
+        #heading {
+            height: 150px;
+            width: 200px;
+            background-color: rgb(82, 71, 71);
+            color:  yellowgreen;
+        }
+        h2 {
+            text-align: center;
+        }
+        #start {
+            margin: 20px;
+        }
+        #stop {
+            margin: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="heading">JS is a sync & single threadede language</h2>
+
+    <button id="start">START</button>
+
+    <button id="stop">STOP</button>
+
+</body>
+<script>
+    // setInterval()
+    let setInt;
+
+    const startInt = function () {
+            document.getElementById('heading').innerHTML = 'Studying setInterval() & clearInterval()'
+        }
+    document.getElementById('start').addEventListener('click', function (e) {
+        setInt = setInterval(startInt, 2000)
+        console.log('setInterval initiated');
+    })
+
+    // clearInterval()
+    const stopIntv = function () {
+        clearInterval(setInt)
+        document.getElementById('heading').innerHTML = 'JS is a sync & single threadede language'
+    }
+
+    document.getElementById('stop').addEventListener('click', function (e) {
+        stopIntv()
+        console.log('clearInterval initiated');
+    })
+</script>
+</html>

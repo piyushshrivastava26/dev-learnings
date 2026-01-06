@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>DUMMY DATA GENERATOR</h4>
+    <hr><hr>
+    <button>Generate Data</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", async () => {
+            // let res = await fetch('/generate-data')
+            let res = await fetch('/generate-data', { method: "GET" });
+            console.log(data);
+            let data = await res.json()
+        })
+    </script>
+</body>
+</html>

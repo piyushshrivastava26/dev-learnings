@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | .createElement</title>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CREATING A NEW ELEMENT IN SCRIPT TAG USING '.createElement'</h1>
+</body>
+<script>
+    const newElement = document.createElement("div")
+    console.log(newElement);    // <div></div>
+    
+    newElement.id = Math.round((Math.random() * 10) + 1)
+    newElement.className = 'aDiv'
+
+    // alloc. of id & class can also be done by using '.setAttribute' method.
+    // newElement.setAttribute("title" = "firstDiv")
+    newElement.setAttribute("title", "generated title")
+
+    // adding styles
+    newElement.style.backgroundColor = "red"
+    newElement.style.color = 'whitesmoke'
+    newElement.style.padding = "15px"
+
+    newElement.style.border = '2px solid green'
+    // newElement.style.border-radius = '20px';     //throwing a error
+
+
+    // one way to add element to the body
+    // newElement.innerText = "It's a div"
+    // document.body.appendChild(newElement)
+
+    // another efficient wat to add element to the body
+    const textNode = document.createTextNode("It's a div 2.O")
+
+    newElement.appendChild(textNode)
+
+    // add element to the body
+    document.body.appendChild(newElement)
+
+
+
+
+
+</script>
+</html>

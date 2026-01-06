@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS | EVENTS</title>
+
+    <link rel="stylesheet" href="events.css">
+</head>
+<body>
+    <h1>Events in JavaScript</h1>
+
+    <!--
+    EVENTS in JS : events is an action or occurence that happens in browser, such as a user clicking a button, a browser finished loading or an error occuring.
+
+    HOW EVENTS WORKS ?
+        Event triggerer : when an event occurs, it triggers a signal to 
+                        event listner.
+
+        Event listner : a fn(event handler) can be attached to an element to 
+                        listen for a specific event on that element.
+ 
+        Event handler : when the event occurs, the associated event handler 
+                        function is executed.
+
+    Common Event Types:
+        click    : When an element is clicked.
+        mouseover: When the mouse pointer enters an element.
+        mouseout : When the mouse pointer leaves an element.
+        keydown  : When a key is pressed down.
+        keyup    : When a key is released.
+        load     : When a page or resource finishes loading.
+        submit   : When a form is submitted.
+    -->
+
+    <div id="container">
+    <div id="red" class="boxes"></div>
+    <div id="green" class="boxes"></div>
+    <div id="blue" class="boxes"></div>
+
+    <a id="anchor" href="https://www.google.com/" target="_blank">TAKE TO GOOGLE</a>
+    </div>
+</body>
+<script>
+
+    // creating an alert        --> it's an old way
+    document.getElementById('red').onclick = function() {
+        alert('Red box clicked')
+    }
+
+    // using click event to create an alert 
+    document.querySelector('#green').addEventListener('click', function(e){
+        console.log('green box clicked');   //prints in console
+        alert('green box clicked')
+    }, false)
+
+
+    // e.preventDefault()   <-- stops the action going to take place
+
+    document.getElementById('anchor').addEventListener('click', function(e) {
+        // console.log('Going to Google');
+        e.preventDefault()  // stops redirecting to google.com
+
+        console.log("Link clicked, but not going anywhere!");
+    })
+
+
+    // e.stopPropogation()  <-- the element won't call by many, stick to one element only A/Cnly depends whether it is e-building(BOTTOMtoTOP) OR e-capturing(TOPtoBOTTOM)
+
+    // if a event is occuring in child then it won't need to call parent necessarily, to avoid that e.stoppropogation() is used
+
+
+    // 
+    document.querySelector('#container').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        
+        if (e.target.tagName === 'DIV' || 'A') {
+            console.log(e.target);
+            console.log(e.target.id);
+        }
+
+        // remove element on click 
+        let removeEle = e.target
+        // removeEle.remove()
+
+        // another way to remove 
+        removeEle.parentNode.removeChild(removeEle)
+    })
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASync JS</title>
+
+    <style> 
+        #heading {
+            height: 150px;
+            width: 200px;
+            background-color: rgb(82, 71, 71);
+            color:  yellowgreen;
+        }
+        h2 {
+            text-align: center;
+        }
+        #stop {
+            margin: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Asynchronous JavaScript (async JS) is a way of writing code that allows you to perform tasks that take time to complete (like fetching data from a server) without blocking the execution of other code.
+
+    Key Concepts in Async JS:
+
+    Callbacks:
+        The traditional way to handle asynchronous operations in JavaScript. You pass a function (the callback) to another function, which will be called when the asynchronous operation completes.
+
+    Promises:
+        A more modern and readable way to handle asynchronous operations. A Promise represents the eventual result of an asynchronous operation, allowing you to chain operations and handle errors more gracefully.
+
+    Async/Await:
+        Syntactic sugar built on top of Promises. It provides a way to write asynchronous code that looks and behaves more like synchronous code, making it easier to read and understand.
+    -->
+
+    
+    <h2 id="heading">JS is a sync & single threadede language</h2>
+
+    <button id="stop">STOP</button>
+</body>
+<script>
+        // SET TIMEOUT and CLEAR TIMEOUT 
+
+    // Set timeout :-
+    const setTO = setTimeout(function() {
+        document.getElementById('heading').innerHTML = 'Studying setTimeout() & clearTimeout()'
+        console.log('heading changed');
+        
+    }, 3000)    // the fn works as an handeler
+
+    //clear timeout :-
+    
+    // clearTimeout(setTO)
+    // adding clearTimeout on the stop button
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearTimeout(setTO)
+        console.log('changes stopped');
+        
+    })
+</script>
+</html>

@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Gilroy"; */
+    font-family: 'Open Sans';
+}
+html, body {
+    height: 100%;
+    width: 100%;
+
+    background-color: black;
+    color: white;
+}
+
+
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 4.17vh;
+    padding: 0.45vh 1.05vw;
+    margin-top: 1vh;
+}
+#nav-1 h3 {
+    font-family: "Gilroy";
+    font-size: 1.08vw;
+}
+h3 {
+    font-size: 0.98vw;
+    font-weight: 300;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#nav-2 {
+    display: flex;
+    align-items: center;
+    gap: 1.85vw;
+}
+
+#text-div {
+    margin-left: auto;
+    width: 60%;
+    margin-left: 8%;
+    position: relative;
+}
+#text-div h1 {
+
+    font-size: 9.5vw;
+    font-weight: 300;
+    line-height: 9vw;
+    text-transform: uppercase;
+    /* cursor: pointer; */
+}
+
+
+#text-div h1:nth-child(1){
+    text-align: left;
+    margin-top: 12vh;
+}
+#text-div h1:nth-child(2){
+    text-align: left;
+}
+#text-div h1:nth-child(3){
+    text-align: left;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.45vh 1.05vw;
+    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+h2 {
+    font-size: 0.98vw;
+    font-weight: 300;
+    /* text-transform: C; */
+
+    margin: 0.45vh;
+}
+.link{
+    cursor: pointer;
+}
+#text {
+    text-align: center;
+}

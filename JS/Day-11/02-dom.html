@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #parent {
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="parent">
+        <div class="months">January</div>
+        <div class="months">February</div>  
+        <div class="months">March</div>
+        <div class="months">April</div>
+        <div class="months">May</div>
+    </div>
+</body>
+
+<script>
+    const parentElem = document.querySelector('#parent')
+    console.log(parentElem);
+
+    console.log(parentElem.children);   // prints all HTML collection
+
+    console.log(parentElem.children[0]);    // prints the element of parentElem at a particular index
+    console.log(parentElem.children[4].innerHTML);    // prints the innerHTML, element of parentElem at a particular index
+    
+    // loops can be used to traverse over the parent's child
+    for (let index = 0; index < parentElem.children.length; index++) {
+        // const element = parentElem[index];
+        // console.log(parentElem.children[index]);
+    }
+
+    parentElem.children[0].style.padding = "15px"
+    parentElem.children[0].style.color = "red"
+
+    parentElem.children[3].style.padding = "20px"
+    
+
+    // we can also access the first and last child of the parent by using '.firstElementChild' & '.lastElementChild'
+    console.log(parentElem.firstElementChild);  // returns with the applied properties in <style> tag.
+    
+    console.log(parentElem.lastElementChild);   // return the last element.
+    
+    
+    // YOU CAN ALSO ACCESS PARENT ELEMENT USING CHILD :-
+
+    // ex-
+    const secEle = document.querySelector('.months')
+    console.log(secEle);
+    console.log(secEle.parentElement);  // or '.parentNode' can be used.
+    console.log(secEle.nextElementSibling);     // returns the next to the current one.
+
+
+    console.log("Nodes :", parentElem.childNodes);  // when you enter, counts as 'text'.
+</script>
+</html>

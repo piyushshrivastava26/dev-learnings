@@ -1,0 +1,7 @@
+userOne = {
+    name : 'Modi',
+    userName : 'modoMeloni',
+    login : 110002,
+    email : 'mantri@here.com'
+    password : 'secractaryKoPtaHai'
+}

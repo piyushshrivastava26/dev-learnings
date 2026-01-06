@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    /* font-family: monospace; */
+}
+
+#main {
+    height: 100vh;
+    width: 100vw;
+    font-family: monospace;
+}
+
+.nav {
+    height: 80px;
+    width: 100vw;
+
+    padding: 0 5.5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* border-bottom: 1px solid black; */
+}
+.nav h1 {
+    font-size: 2.1vw;
+    font-weight: 700;
+    cursor: pointer;
+}
+.nav h1:hover {
+    /* border-bottom: 1px solid #333; */
+    font-size: 2.2vw;
+    transition: all ease-in-out font-size;
+}
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* background-color: crimson; */
+    gap: 5vw;
+}
+.nav h3 {
+    font-size: 1.2vw;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+.nav h3:hover {
+    border-bottom: 1px solid #333;
+}
+.nav h3:active {
+    color: crimson;
+    border-bottom: 1px solid crimson;
+}
+.nav-content button{
+    font-size: 1.2vw;
+    font-weight: 500;
+    cursor: pointer;
+
+    background-color: lightseagreen;
+    color: white;
+
+    border: 0px solid #111;
+    border-radius: 5px;
+
+    padding: .8vw 1.8vw;
+}
+
+
+.hero-section {
+    width: 100vw;
+    height: calc(100vh - 80px);
+
+    display: flex;
+
+    /* background-color: goldenrod; */
+}
+.left {
+    height: 100%;
+    width: 55%;
+
+    padding: 5.3vw 5.6vw;
+}
+.left h2 {
+    font-size: 3vw;
+    line-height: 3.4vw;
+}
+span {
+    color: lightseagreen;
+}
+#ind {
+    color: rgb(249, 172, 29);
+}
+.left p {
+    font-weight: 500;
+    font-size: 1vw;
+    line-height: 1.3vw;
+
+    width: 85%;
+
+    color: #444343;
+
+    padding-top: 1.5vw;
+}
+.left button {
+    margin-top: 4vw;
+
+    padding: 1vw 1.8vw;
+    border: 0px solid #000;
+    border-radius: 5px;
+    
+    background-color: lightseagreen;
+    color: white;
+}
+
+ 
+.right {
+    height: 100%;
+    width: 45%;
+}
